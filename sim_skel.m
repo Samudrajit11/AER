@@ -23,7 +23,7 @@ gamma = 6*pi*eta*R; % N*sec/m
 D = KbT/gamma; % m^2/sec
 distan=dist*R; 
 pos = [0.0 0.0 distan 0.0];
-[frame]=rotne_get_frames_mex(particle_count,KbT,Total_time,collision_time,camera_t,repos_time,drivin_dist,pos,R,D,A);
+[frame]=rotne_get_frames(particle_count,KbT,Total_time,collision_time,camera_t,repos_time,drivin_dist,pos,R,D,A);
 frame = frame(any(frame,2),:);
 
  out_fps=output_aer_2part_fps(frame);
