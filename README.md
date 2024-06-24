@@ -13,4 +13,6 @@ https://arxiv.org/pdf/2310.12718
 Files:
 
 sim_skel.m
--
+-main file to run. Outputs the AER as a function of imaging rate.
+
+
