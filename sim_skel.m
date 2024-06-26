@@ -1,7 +1,7 @@
 function[out_fps]=sim_skel(dist,drivin_dist)
 %
 %dist - distance between particles in units of particle radius
-%driving_dist - b_o/0.0364 um %[1.5 3.022] gives b_0=[55 110] nm
+%driving_dist - b_o in um 
 %out_fps - matrix with column 1- FPS, column 2 - AER
 tic
 rng('shuffle')
@@ -23,7 +23,7 @@ gamma = 6*pi*eta*R; % N*sec/m
 D = KbT/gamma; % m^2/sec
 distan=dist*R; 
 pos = [0.0 0.0 distan 0.0];
-[frame]=rotne_get_frames(particle_count,KbT,Total_time,collision_time,camera_t,repos_time,drivin_dist,pos,R,D,A);
+[frame]=rotne_get_frames(particle_count,KbT,Total_time,collision_time,camera_t,repos_time,drivin_dist,pos,R,D,A); %use mex function for faster run
 frame = frame(any(frame,2),:);
 
  out_fps=output_aer_2part_fps(frame);
