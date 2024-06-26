@@ -13,16 +13,20 @@ https://arxiv.org/pdf/2310.12718
 Files:
 
 sim_skel.m
+
 -main file to run. Outputs the AER as a function of imaging rate.
 
 rotne_get_frames.m
+
 -main function that solves the Langevin equation with hydrodynamic interactions
 and outputs positions of the particles.
 
 rotne_prager.m
+
 -function that computes the Diffusion matrix in case of Rotne-Prager interaction.
 
 output_aer_2part_fps.m
+
 -function that computes the AER from the positions and gives the AER as a function of 
 the imaging rate.
 
