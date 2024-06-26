@@ -23,8 +23,8 @@ while i<(Total_time/collision_time)
     pos = pos  + random_noise_displacement - trap_displacement;
 
     if ~mod(i,time_a)
-        % reposition the trap with the relevant conversion between pixel and um using some chosen sigma (~size of displacement)
-        initiate_trap(ax_num) = 0.0364*randn*drivin_dist*10^(-6);
+        % reposition the trap using some chosen sigma (~size of displacement)
+        initiate_trap(ax_num) = randn*drivin_dist*10^(-6);
 %        repos_place(i/time_a) = initiate_trap(ax_num); % save the new positions for analysis later
     end
 
